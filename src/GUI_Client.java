@@ -104,7 +104,7 @@ public class GUI_Client extends Application {
 
         VBox options = new VBox(start, join);
         Group ls = new Group(options);
-        final Scene loginscreen = new Scene(ls, 300, 300, Color.GREEN);
+        final Scene loginscreen = new Scene(ls, 300, 300, Color.WHITE);
 
         s.setTitle("Tic Tac Toe");
         s.getIcons().add(new Image("file:icons/icon1.png"));
