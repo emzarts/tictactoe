@@ -17,6 +17,8 @@ import java.io.IOException;
 // Todo add a cancel button
 // Todo help button/ menu
 // Todo test stuff third move crashes??
+// Todo both start a new game on the same port... BAD
+// Todo fix when one client closes the other crashes
 
 public class GUI_Client extends Application {
 

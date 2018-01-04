@@ -38,6 +38,7 @@ public class TicTacGUI {
     }
 
     public void run() {
+        System.out.println("RUNNNNN"); //TODO
         BorderPane w = new BorderPane();
         w.setStyle("-fx-background-color: transparent;");
         Text txt = new Text("Waiting for player two...");
@@ -101,7 +102,9 @@ public class TicTacGUI {
                     while ((line = in.readLine()) != null) {
                         switch (line) {
                             case Protocol.MOVE_MADE:
+                                System.out.println("MOVE MADE"); //TODO
                                 String move = in.readLine();
+                                System.out.println("MOVE " + move); // TODO
                                 String[] l = move.split(" ");
                                 String p;
                                 if (me.equals("X")) p = "O";
@@ -111,6 +114,7 @@ public class TicTacGUI {
                                 root.setDisable(false);
                                 Platform.runLater(() -> root.setBottom(new Text("Your turn. . .")));
                                 System.in.read(new byte[System.in.available()]); // Clears System.in
+                                System.out.println("DONE WITH  MOVE");
                                 break;
                             case Protocol.GAME_WON:
                                 Platform.runLater(() ->root.setBottom(new Text("You won!")));
